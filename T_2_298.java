@@ -6,9 +6,16 @@ public class T_2_298 {
         int n=sc.nextInt();
         int num=1; //declared outer cuz its not changing in every row 
         for(int i=1;i<=n;i++ ){
-            for(int j=1;j<=i;j++){
+            if(i%2==0)for(int j=1;j<=i;j++){
                 System.out.print(num + " ");
                 num++;//increasing the num
+            }
+            else{
+                int temp = num+i-1;
+                for(int j= 1;j<=i;j++){
+                    System.out.print(temp-- + " ");
+                    num++;
+                }
             }
             System.out.println();
         }
